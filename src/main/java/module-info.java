@@ -6,5 +6,7 @@ module com.coding.labyrtintheteamaim {
     requires com.dlsc.formsfx;
 
     opens com.coding.labyrtintheteamaim to javafx.fxml;
+    exports com.coding.labyrtintheteamaim.controller;
+    opens com.coding.labyrtintheteamaim.controller to javafx.fxml;
     exports com.coding.labyrtintheteamaim;
 }
