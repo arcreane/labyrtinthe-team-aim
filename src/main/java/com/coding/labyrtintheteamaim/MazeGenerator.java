@@ -3,10 +3,7 @@ package com.coding.labyrtintheteamaim;
 import java.io.*;
 import java.util.Collections;
 import java.util.Arrays;
-import com.coding.labyrtintheteamaim.MazeSolver;
-
 import static com.coding.labyrtintheteamaim.MazeConfigurator.start;
-import static com.coding.labyrtintheteamaim.MazeSolver.*;
 
 //recursive backtracking algorithm
 
@@ -92,18 +89,6 @@ public class MazeGenerator {
             this.dx = dx;
             this.dy = dy;
         }
-    }
-
-    public static void main (String[] args) throws IOException
-    {
-        start();
-        InputStream f = new FileInputStream("Solution.txt");
-        String[] lines = readLines (f);
-        char[][] maze = decimateHorizontally (lines);
-        solveMaze (maze);
-        String[] solvedLines = expandHorizontally (maze);
-        for (int i = 0  ;  i < solvedLines.length  ;  i++)
-            System.out.println (solvedLines[i]);
     }
 
 }
