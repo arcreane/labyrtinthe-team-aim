@@ -1,12 +1,13 @@
 package com.coding.labyrtintheteamaim;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import static javafx.application.Platform.exit;
 
 public class MazeConfigurator {
 
-    public static void start(){
+    public static void start() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("MENU \n" +
                 "1- Play ; \n" +
@@ -61,6 +62,26 @@ public class MazeConfigurator {
                 maze.display();
             }else if (gameModeNumber == 5){
                 start();
+            }
+
+            if (gameModeNumber>=1 && gameModeNumber<=4){
+                Scanner scan = new Scanner(System.in);
+                Chrono chrono = new Chrono();
+                chrono.start();
+                System.out.println("Write Finish when you've done");
+                String mazeNumber = scan.nextLine();
+
+                if (mazeNumber == "Finish"){
+                    chrono.stop();
+                System.out.println(chrono.getDureeSec());
+                System.out.println(chrono.getDureeSec());
+                System.out.println(chrono.getDureeTxt());
+                }
+//                System.out.println(mazeNumber);
+//                chrono.stop();
+//                System.out.println(chrono.getDureeSec());
+//                System.out.println(chrono.getDureeSec());
+//                System.out.println(chrono.getDureeTxt());
             }
 
 
