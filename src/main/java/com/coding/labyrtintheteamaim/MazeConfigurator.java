@@ -1,8 +1,10 @@
 package com.coding.labyrtintheteamaim;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Scanner;
 
+import static com.coding.labyrtintheteamaim.MazeSolver.Solv;
 import static javafx.application.Platform.exit;
 
 public class MazeConfigurator {
@@ -68,25 +70,45 @@ public class MazeConfigurator {
                 Scanner scan = new Scanner(System.in);
                 Chrono chrono = new Chrono();
                 chrono.start();
-                System.out.println("Write Finish when you've done");
-                String mazeNumber = scan.nextLine();
+                System.out.println("Write Finish or F when you've done");
+                System.out.print("--> ");
 
-                if (mazeNumber == "Finish"){
-                    chrono.stop();
-                System.out.println(chrono.getDureeSec());
-                System.out.println(chrono.getDureeSec());
-                System.out.println(chrono.getDureeTxt());
+                boolean valid = false;
+
+                while (valid == false) {
+                    String mazeNumber = scan.nextLine();
+                    if (Objects.equals(mazeNumber, "Finish") || Objects.equals(mazeNumber, "F") ){
+                        chrono.stop();
+//                    System.out.println(chrono.getDureeMs());
+//                    System.out.println(chrono.getDureeSec());
+                        System.out.println("You time is : " + chrono.getDureeTxt());
+                        System.out.println();
+                        valid = true;
+                    }else {
+                        System.out.println("Wrong : You need to write Finish or F !");
+                        System.out.print("--> ");
+                    }
                 }
-//                System.out.println(mazeNumber);
-//                chrono.stop();
-//                System.out.println(chrono.getDureeSec());
-//                System.out.println(chrono.getDureeSec());
-//                System.out.println(chrono.getDureeTxt());
+
+                System.out.println("You want to :\n" +
+                        "1- Show solution\n" +
+                        "2- Back to Main Menu");
+                System.out.print("\n" +
+                        "--> ");
+                int result = scanner.nextInt();
+                System.out.println(" ");
+
+                if (result == 1) {
+                    Solv();
+                    System.out.println("");
+                    start();
+                }else if (result == 2) {
+                    start();
+                }
             }
 
-
         }else if (menuNumber == 2){
-            System.out.println("You leave");
+            System.out.println("You are leaving ");
         }
     }
 }
