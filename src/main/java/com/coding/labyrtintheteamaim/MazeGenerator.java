@@ -3,6 +3,8 @@ package com.coding.labyrtintheteamaim;
 import java.util.Collections;
 import java.util.Arrays;
 
+import static com.coding.labyrtintheteamaim.MazeConfigurator.start;
+
 //recursive backtracking algorithm
 
 public class MazeGenerator {
@@ -10,9 +12,9 @@ public class MazeGenerator {
     private final int y;
     private final int[][] maze;
 
-    public MazeGenerator(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public MazeGenerator(int width, int height) {
+        this.x = width;
+        this.y = height;
         maze = new int[this.x][this.y];
         generateMaze(0, 0);
     }
@@ -83,9 +85,8 @@ public class MazeGenerator {
     }
 
     public static void main(String[] args) {
-        int x = args.length >= 1 ? (Integer.parseInt(args[0])) : 10;
-        int y = args.length == 2 ? (Integer.parseInt(args[1])) : 10;
-        MazeGenerator maze = new MazeGenerator(x, y);
-        maze.display();
+        start();
+//        MazeGenerator maze = new MazeGenerator(x, y);
+//        maze.display();
     }
 }
