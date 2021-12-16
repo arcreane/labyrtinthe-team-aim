@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="labyrtinthe-team-aim" target="17" />
+      <module name="labyrtinthe-team-aim" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
