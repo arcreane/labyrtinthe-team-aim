@@ -114,4 +114,14 @@ public class MazeSolver {
         }
         return lines;
     }
+
+    public static void Solv() throws IOException {
+        InputStream f = new FileInputStream("Solution.txt");
+        String[] lines = readLines (f);
+        char[][] maze = decimateHorizontally (lines);
+        solveMaze (maze);
+        String[] solvedLines = expandHorizontally (maze);
+        for (int i = 0  ;  i < solvedLines.length  ;  i++)
+            System.out.println (solvedLines[i]);
+    }
 }
