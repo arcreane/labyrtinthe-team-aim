@@ -18,9 +18,9 @@ public class MazeSolver {
     }
 
 
-    //
+    ////
 
-
+    //Resize maze
     public static char[][] decimateHorizontally (String[] lines) {
         final int width = (lines[0].length() + 1) / 2;
         char[][] c = new char[lines.length][width];
@@ -35,7 +35,7 @@ public class MazeSolver {
 
 
     public static boolean solveMazeRecursively (char[][] maze, int x, int y, int d) {
-
+    //Function to find the solution
         boolean ok = false;
         for (int i = 0  ;  i < 4  &&  !ok  ;  i++)
             if (i != d)
@@ -63,19 +63,19 @@ public class MazeSolver {
             ok = true;
         // once we have found a solution, draw it as we unwind the recursion
         if (ok) {
-            maze[y][x] = '*';
+            maze[y][x] = '#';
             switch (d) {
                 case 0:
-                    maze[y-1][x] = '*';
+                    maze[y-1][x] = '#';
                     break;
                 case 1:
-                    maze[y][x+1] = '*';
+                    maze[y][x+1] = '#';
                     break;
                 case 2:
-                    maze[y+1][x] = '*';
+                    maze[y+1][x] = '#';
                     break;
                 case 3:
-                    maze[y][x-1] = '*';
+                    maze[y][x-1] = '#';
                     break;
             }
         }
