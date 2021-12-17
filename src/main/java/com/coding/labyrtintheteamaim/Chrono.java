@@ -11,7 +11,7 @@ public class Chrono {
 
     public void start()
     {
-        //start fonction that will start the chrono
+        //start function that will start the chrono
         tempsDepart=System.currentTimeMillis();
         tempsFin=0;
         pauseDepart=0;
