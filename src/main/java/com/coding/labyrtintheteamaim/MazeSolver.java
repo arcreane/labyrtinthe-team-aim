@@ -1,6 +1,7 @@
 package com.coding.labyrtintheteamaim;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class MazeSolver {
@@ -8,9 +9,8 @@ public class MazeSolver {
 //    Reads a file into an array of strings, one per line.
 
     public static String[] readLines (InputStream f) throws IOException {
-        BufferedReader r =
-                new BufferedReader (new InputStreamReader (f, "US-ASCII"));
-        ArrayList<String> lines = new ArrayList<String>();
+        BufferedReader r = new BufferedReader (new InputStreamReader (f, StandardCharsets.US_ASCII));
+        ArrayList<String> lines = new ArrayList<>();
         String line;
         while ((line = r.readLine()) != null)
             lines.add (line);
@@ -20,7 +20,7 @@ public class MazeSolver {
 
     ////
 
-    //Resize maze
+    //Reduce maze size
     public static char[][] decimateHorizontally (String[] lines) {
         final int width = (lines[0].length() + 1) / 2;
         char[][] c = new char[lines.length][width];
@@ -93,7 +93,7 @@ public class MazeSolver {
 
     ////
 
-
+    //Increase maze size
     public static String[] expandHorizontally (char[][] maze) {
         char[] tmp = new char[3];
         String[] lines = new String[maze.length];
