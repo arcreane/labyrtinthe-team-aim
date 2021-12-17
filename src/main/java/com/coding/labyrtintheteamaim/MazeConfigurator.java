@@ -54,7 +54,7 @@ public class MazeConfigurator {
 
             }else if (gameModeNumber == 2){
                 int width = 15;
-                int height = 15;
+                int height = 10;
 
                 //To prevent player that the game will start
                 try {
@@ -72,7 +72,7 @@ public class MazeConfigurator {
 
             }else if (gameModeNumber == 3){
                 int width = 30;
-                int height = 30;
+                int height = 20;
 
                 //To prevent player that the game will start
                 try {
