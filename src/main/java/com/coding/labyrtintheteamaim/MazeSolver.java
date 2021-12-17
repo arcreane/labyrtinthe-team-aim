@@ -63,19 +63,19 @@ public class MazeSolver {
             ok = true;
         // once we have found a solution, draw it as we unwind the recursion
         if (ok) {
-            maze[y][x] = '#';
+            maze[y][x] = '*';
             switch (d) {
                 case 0:
-                    maze[y-1][x] = '#';
+                    maze[y-1][x] = '*';
                     break;
                 case 1:
-                    maze[y][x+1] = '#';
+                    maze[y][x+1] = '*';
                     break;
                 case 2:
-                    maze[y+1][x] = '#';
+                    maze[y+1][x] = '*';
                     break;
                 case 3:
-                    maze[y][x-1] = '#';
+                    maze[y][x-1] = '*';
                     break;
             }
         }
