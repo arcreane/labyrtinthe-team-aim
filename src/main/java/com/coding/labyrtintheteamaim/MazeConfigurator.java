@@ -84,7 +84,8 @@ public class MazeConfigurator {
                     String mazeNumber = scan.nextLine();
                     if (Objects.equals(mazeNumber, "Finish") || Objects.equals(mazeNumber, "F") ){
                         chrono.stop();
-                        System.out.println("Your time is : " + chrono.getDureeTxt());
+                        System.out.println("Congrats you finish the maze !\n" +
+                                "Your time is : " + chrono.getDureeTxt());
                         System.out.println();
                         valid = false;
                     }else {
