@@ -37,20 +37,56 @@ public class MazeConfigurator {
             if (gameModeNumber == 1){
                 int width = 10;
                 int height = 10;
+
+                //To prevent player that the game will start
+                try {
+                    System.out.println("The game is starting\n" +
+                            " ");
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //
+
                 MazeGenerator maze = new MazeGenerator(width, height); //create maze
                 maze.display(); //Show the maze
+
 
             }else if (gameModeNumber == 2){
                 int width = 15;
                 int height = 15;
+
+                //To prevent player that the game will start
+                try {
+                    System.out.println("The game is starting\n" +
+                            " ");
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //
+
                 MazeGenerator maze = new MazeGenerator(width, height);//create maze
                 maze.display(); //Show the maze
+
 
             }else if (gameModeNumber == 3){
                 int width = 30;
                 int height = 30;
+
+                //To prevent player that the game will start
+                try {
+                    System.out.println("The game is starting\n" +
+                            " ");
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //
+
                 MazeGenerator maze = new MazeGenerator(width, height);//create maze
                 maze.display(); //Show the maze
+
 
             }else if (gameModeNumber == 4){
 
@@ -64,13 +100,26 @@ public class MazeConfigurator {
                 int height = scanner.nextInt();
                 System.out.println(" ");
 
+                //To prevent player that the game will start
+                try {
+                    System.out.println("The game is starting\n" +
+                            " ");
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //
+
                 MazeGenerator maze = new MazeGenerator(width, height);//create maze
                 maze.display(); //Show the maze
+
+
             }else if (gameModeNumber == 5){
                 start();
             }
 
             if (gameModeNumber>=1 && gameModeNumber<=4){
+
                 Scanner scan = new Scanner(System.in);
                 Chrono chrono = new Chrono();
                 chrono.start();
