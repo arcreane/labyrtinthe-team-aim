@@ -18,9 +18,9 @@ public class MazeSolver {
     }
 
 
-    //
+    ////
 
-
+    //Resize maze
     public static char[][] decimateHorizontally (String[] lines) {
         final int width = (lines[0].length() + 1) / 2;
         char[][] c = new char[lines.length][width];
@@ -35,7 +35,7 @@ public class MazeSolver {
 
 
     public static boolean solveMazeRecursively (char[][] maze, int x, int y, int d) {
-
+    //Function to find the solution
         boolean ok = false;
         for (int i = 0  ;  i < 4  &&  !ok  ;  i++)
             if (i != d)
@@ -115,7 +115,7 @@ public class MazeSolver {
         return lines;
     }
 
-    public static void Solv() throws IOException {
+    public static void Solution() throws IOException {
         InputStream f = new FileInputStream("Solution.txt");
         String[] lines = readLines (f);
         char[][] maze = decimateHorizontally (lines);
