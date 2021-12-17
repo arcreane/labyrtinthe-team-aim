@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Scanner;
 
-import static com.coding.labyrtintheteamaim.MazeSolver.Solv;
+import static com.coding.labyrtintheteamaim.MazeSolver.Solution;
 
 public class MazeConfigurator {
 
@@ -42,7 +42,7 @@ public class MazeConfigurator {
                 try {
                     System.out.println("The game is starting\n" +
                             " ");
-                    Thread.sleep(2000);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -60,7 +60,7 @@ public class MazeConfigurator {
                 try {
                     System.out.println("The game is starting\n" +
                             " ");
-                    Thread.sleep(2000);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -78,7 +78,7 @@ public class MazeConfigurator {
                 try {
                     System.out.println("The game is starting\n" +
                             " ");
-                    Thread.sleep(2000);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -104,7 +104,7 @@ public class MazeConfigurator {
                 try {
                     System.out.println("The game is starting\n" +
                             " ");
-                    Thread.sleep(2000);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -153,7 +153,7 @@ public class MazeConfigurator {
                 System.out.println(" ");
 
                 if (result == 1) {
-                    Solv();
+                    Solution();
                     System.out.println(" ");
                     start();
                 }else if (result == 2) {

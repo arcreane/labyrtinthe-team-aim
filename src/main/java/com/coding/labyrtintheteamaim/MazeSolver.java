@@ -115,7 +115,7 @@ public class MazeSolver {
         return lines;
     }
 
-    public static void Solv() throws IOException {
+    public static void Solution() throws IOException {
         InputStream f = new FileInputStream("Solution.txt");
         String[] lines = readLines (f);
         char[][] maze = decimateHorizontally (lines);
